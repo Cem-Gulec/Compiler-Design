@@ -1,0 +1,6 @@
+INT,input
+INT,rem
+INT,evenCount
+INT,oddCount
+FUNCTION,isEven
+INT,in

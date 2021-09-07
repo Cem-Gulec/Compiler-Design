@@ -1,0 +1,49 @@
+    # st_delimiters -> ST_DELIMITER st_delimiters | Empty
+    # stn_delimiters -> ST_DELIMITER stn_delimiters | N-DELIMITER stn_delimiters | Empty
+    # single_new_line -> st_delimiters N-DELIMITER st_delimiters | Empty
+    # stmts -> n_stmt stmts | func_init_stmt stmts | $ (EOF)
+    # n_stmts -> stn_delimiters n_stmt stn_delimiters n_stmts | Empty
+    # n_stmt -> decl_stmt | compound_stmt | if_stmt | for_stmt | loop_stmt | func_call_stmt | assign_stmt | unary_stmt
+    # ufa_common_stmt -> ID ufa_common_stmt_continue
+    # ufa_common_stmt_continue -> unary_continue | func_call_continue | assign_stmt_wo_id
+    # decl_stmt -> variable_type st_delimiters decl_stmt_end
+    # variable_type -> INT | DOUBLE | STRING
+    # decl_stmt_end -> ID st_delimiters decl_stmt_body st_delimiters SEMICOLON
+    # decl_stmt_body -> assignment_operators st_delimiters simple_expr | Empty
+    # assign_stmt -> assign_stmt_start st_delimiters SEMICOLON ----!!!
+    # assign_stmt_start -> ID st_delimiters assignment_operators st_delimiters arithm_expr
+    # assign_stmt_wo_id -> st_delimiters assignment_operators st_delimiters arithm_expr
+    # assignment_operators -> N-ASSIGN-OPT | A-ASSIGN-OPT | S-ASSIGN-OPT | M-ASSIGN-OPT | D-ASSIGN-OPT (with token classes explanation)
+    # compound_stmt -> OPEN-B stn_delimiters compound_stmt_body  CLOSE-B
+    # compound_stmt_body -> stmts | Empty
+    # unary_continue -> unary_operators st_delimiters SEMICOLON
+    # if_stmt -> IF stn_delimiters OPEN-P stn_delimiters bool_expr stn_delimiters CLOSE-P st_delimiters single_new_line n_stmt stn_delimiters if_stmt_end
+    # if_stmt_end ->  ELSE if_stmt_end_variations n_stmt
+    # if_stmt_end_variations -> st_delimiters | single_new_line
+    # for_stmt → FOR-LOOP stn_delimiters OPEN-P stn_delimiters for_decl stn_delimiters bool_expr stn_delimiters SEMICOLON stn_delimiters iter_spec stn_delimiters CLOSE-P st_delimiters single_new_line n_stmt
+    # for_decl -> for_decl_start st_delimiters SEMICOLON | assign_stmt_start st_delimiters SEMICOLON
+    # num_variable_type -> INT | DOUBLE
+    # for_decl_start -> num_variable_type st_delimiters ID st_delimiters assignment_operators st_delimiters arithm_expr
+    # iter_spec -> ID iter_spec_end
+    # iter_spec_end -> st_delimiters iter_spec_assign_variations st_delimiters arithm_expr | unary_operators
+    # iter_spec_assign_variations -> A-ASSIGN_OPT | S-ASSIGN_OPT | M-ASSIGN_OPT | D-ASSIGN_OPT
+    # loop_stmt -> WHILE-LOOP stn_delimiters OPEN-P stn_delimiters bool_expr stn_delimiters CLOSE-P st_delimiters single_new_line n_stmt 
+    # bool_expr -> bool_expr_start_variations stn_delimiters bool_expr_continue
+    # bool_expr_start_variations -> OPEN-P st_delimiters simple_bool_expr st_delimiters CLOSE-P | simple_bool_expr
+    # bool_expr_continue -> logical_operators st_delimiters simple_bool_expr st_delimiters bool_expr_continue | Empty
+    # simple_bool_expr -> simple_expr st_delimiters relational_operators st_delimiters simple_expr
+    # logical_operators -> AND-LOGICAL | OR-LOGICAL | AND-BINARY | OR-BINARY
+    # relational_operators -> EQ | NE | GT | GE | LT | LE
+    # unary_operators -> INCREMENT | DECREMENT
+    # func_init_stmt -> stn_delimiters FUNCTION stn_delimiters ID stn_delimiters OPEN-P stn_delimiters params_list stn_delimiters CLOSE-P stn_delimiters compound_stmt stn_delimiters
+    # params_list -> param_decl st_delimiters params_list_continue | EMPTY
+    # params_list_continue -> COMMA st_delimiters param_decl st_delimiters params_list_continue | EMPTY
+    # param_decl -> variable_type st_delimiters ID
+    # func_call_continue -> ID stn_delimiters OPEN-P stn_delimiters params_values_list stn_delimiters CLOSE-P st_delimiters SEMICOLON
+    # params_values_list -> simple_expr st_delimiters params_value_list_continue | EMPTY
+    # params_value_list_continue -> COMMA st_delimiters simple_expr st_delimiters params_value_list_continue | EMPTY
+    # arithm_simple_expr -> ID | INT-VAR | DOUBLE-VAR | OPEN-P stn_delimiters arithm_expr stn_delimiters CLOSE-P
+    # arithm_expr -> arithm_simple_expr stn_delimiters arithm_expr_end
+    # arithm_expr_end -> arithm_operators st_delimiters arithm_expr | EMPTY
+    # simple_expr -> arithm_expr | STRING-VAR 
+    # arithm_operators -> PLUS | MINUS | MULT | DIV | REM

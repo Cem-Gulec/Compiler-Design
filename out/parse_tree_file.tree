@@ -1,0 +1,59 @@
+flex_start
+└── stmts
+    ├── n_stmt
+    │   └── for_stmt
+    │       ├── TERM
+    │       │   └── FOR-LOOP
+    │       ├── TERM
+    │       │   └── OPEN-P
+    │       ├── for_decl
+    │       │   ├── for_decl_start
+    │       │   │   ├── num_variable_type
+    │       │   │   │   └── TERM
+    │       │   │   │       └── INT
+    │       │   │   ├── TERM
+    │       │   │   │   └── ID,a
+    │       │   │   ├── assignment_operators
+    │       │   │   │   └── TERM
+    │       │   │   │       └── N-ASSIGN-OPT
+    │       │   │   └── arithm_expr
+    │       │   │       └── arithm_simple_expr
+    │       │   │           └── TERM
+    │       │   │               └── INT-VAR,3
+    │       │   └── TERM
+    │       │       └── SEMICOLON
+    │       ├── bool_expr
+    │       │   └── bool_expr_start_variations
+    │       │       └── simple_bool_expr
+    │       │           ├── simple_expr
+    │       │           │   └── arithm_expr
+    │       │           │       └── arithm_simple_expr
+    │       │           │           └── TERM
+    │       │           │               └── ID,a
+    │       │           ├── relational_operators
+    │       │           │   └── TERM
+    │       │           │       └── NE
+    │       │           └── simple_expr
+    │       │               └── arithm_expr
+    │       │                   └── arithm_simple_expr
+    │       │                       └── TERM
+    │       │                           └── INT-VAR,5
+    │       ├── TERM
+    │       │   └── SEMICOLON
+    │       ├── iter_spec
+    │       │   ├── TERM
+    │       │   │   └── ID,a
+    │       │   └── iter_spec_end
+    │       │       └── unary_operators
+    │       │           └── TERM
+    │       │               └── INCREMENT
+    │       ├── TERM
+    │       │   └── CLOSE-P
+    │       └── n_stmt
+    │           └── compound_stmt
+    │               ├── TERM
+    │               │   └── OPEN-B
+    │               └── TERM
+    │                   └── CLOSE-B
+    └── TERM
+        └── EOF

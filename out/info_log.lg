@@ -1,0 +1,609 @@
+In execution -> : stmts : token INT
+ In execution -> : stn-delimiters : token INT
+ In execution -> : n_stmt : token INT
+ 	In execution -> : decl_stmt : token INT
+ 		In execution -> : variable_type : token INT
+ 		Terminated->: INT : token INT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmt_end : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmtm_body : token N-ASSIGN-OPT
+ 		In execution -> : assignment_operators : token N-ASSIGN-OPT
+ 		Terminated->: N-ASSIGN-OPT : token N-ASSIGN-OPT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : simple_expr : token INT-VAR
+ 		In execution -> : arithm_expr : token INT-VAR
+ 		In execution -> : arithm_simple_expr : token INT-VAR
+ 		Terminated->: INT-VAR : token INT-VAR
+ 		In execution -> : stn-delimiters : token SEMICOLON
+ 		In execution -> : arithm_expr_end : token SEMICOLON
+ 		In execution -> : arithm_operators : token SEMICOLON
+ 		In execution -> : st-delimiters : token SEMICOLON
+ 		Terminated->: SEMICOLON : token SEMICOLON
+ In execution -> : stn-delimiters : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ In execution -> : stn-delimiters : token INT
+ In execution -> : n_stmt : token INT
+ 	In execution -> : decl_stmt : token INT
+ 		In execution -> : variable_type : token INT
+ 		Terminated->: INT : token INT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmt_end : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmtm_body : token N-ASSIGN-OPT
+ 		In execution -> : assignment_operators : token N-ASSIGN-OPT
+ 		Terminated->: N-ASSIGN-OPT : token N-ASSIGN-OPT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : simple_expr : token OPEN-P
+ 		In execution -> : arithm_expr : token OPEN-P
+ 		In execution -> : arithm_simple_expr : token OPEN-P
+ 		Terminated->: OPEN-P : token OPEN-P
+ 		In execution -> : stn-delimiters : token ID
+ 		In execution -> : arithm_expr : token ID
+ 		In execution -> : arithm_simple_expr : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : stn-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : arithm_expr_end : token REM
+ 		In execution -> : arithm_operators : token REM
+ 		Terminated->: REM : token REM
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : arithm_expr : token INT-VAR
+ 		In execution -> : arithm_simple_expr : token INT-VAR
+ 		Terminated->: INT-VAR : token INT-VAR
+ 		In execution -> : stn-delimiters : token CLOSE-P
+ 		In execution -> : arithm_expr_end : token CLOSE-P
+ 		In execution -> : arithm_operators : token CLOSE-P
+ 		In execution -> : stn-delimiters : token CLOSE-P
+ 		Terminated->: CLOSE-P : token CLOSE-P
+ 		In execution -> : stn-delimiters : token SEMICOLON
+ 		In execution -> : arithm_expr_end : token SEMICOLON
+ 		In execution -> : arithm_operators : token SEMICOLON
+ 		In execution -> : st-delimiters : token SEMICOLON
+ 		Terminated->: SEMICOLON : token SEMICOLON
+ In execution -> : stn-delimiters : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ In execution -> : stn-delimiters : token INT
+ In execution -> : n_stmt : token INT
+ 	In execution -> : decl_stmt : token INT
+ 		In execution -> : variable_type : token INT
+ 		Terminated->: INT : token INT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmt_end : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmtm_body : token N-ASSIGN-OPT
+ 		In execution -> : assignment_operators : token N-ASSIGN-OPT
+ 		Terminated->: N-ASSIGN-OPT : token N-ASSIGN-OPT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : simple_expr : token INT-VAR
+ 		In execution -> : arithm_expr : token INT-VAR
+ 		In execution -> : arithm_simple_expr : token INT-VAR
+ 		Terminated->: INT-VAR : token INT-VAR
+ 		In execution -> : stn-delimiters : token SEMICOLON
+ 		In execution -> : arithm_expr_end : token SEMICOLON
+ 		In execution -> : arithm_operators : token SEMICOLON
+ 		In execution -> : st-delimiters : token SEMICOLON
+ 		Terminated->: SEMICOLON : token SEMICOLON
+ In execution -> : stn-delimiters : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ In execution -> : stn-delimiters : token INT
+ In execution -> : n_stmt : token INT
+ 	In execution -> : decl_stmt : token INT
+ 		In execution -> : variable_type : token INT
+ 		Terminated->: INT : token INT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmt_end : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : decl_stmtm_body : token N-ASSIGN-OPT
+ 		In execution -> : assignment_operators : token N-ASSIGN-OPT
+ 		Terminated->: N-ASSIGN-OPT : token N-ASSIGN-OPT
+ 		In execution -> : st-delimiters : token ST-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : simple_expr : token INT-VAR
+ 		In execution -> : arithm_expr : token INT-VAR
+ 		In execution -> : arithm_simple_expr : token INT-VAR
+ 		Terminated->: INT-VAR : token INT-VAR
+ 		In execution -> : stn-delimiters : token SEMICOLON
+ 		In execution -> : arithm_expr_end : token SEMICOLON
+ 		In execution -> : arithm_operators : token SEMICOLON
+ 		In execution -> : st-delimiters : token SEMICOLON
+ 		Terminated->: SEMICOLON : token SEMICOLON
+ In execution -> : stn-delimiters : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ Terminated->: N-DELIMITER : token N-DELIMITER
+ In execution -> : stn-delimiters : token FUNCTION
+ In execution -> : n_stmt : token FUNCTION
+ 	In execution -> : decl_stmt : token FUNCTION
+ 		In execution -> : variable_type : token FUNCTION
+ 	In execution -> : compound_stmt : token FUNCTION
+ 	In execution -> : if_stmt : token FUNCTION
+ 	In execution -> : for_stmt : token FUNCTION
+ 	In execution -> : loop_stmt : token FUNCTION
+ 	In execution -> : ufa_common_stmt : token FUNCTION
+ In execution -> : stn-delimiters : token FUNCTION
+ In execution -> : func_init_stmt : token FUNCTION
+ 	In execution -> : stn-delimiters : token FUNCTION
+ 	Terminated->: FUNCTION : token FUNCTION
+ 	In execution -> : stn-delimiters : token ST-DELIMITER
+ 	Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 	Terminated->: ID : token ID
+ 	In execution -> : stn-delimiters : token OPEN-P
+ 	Terminated->: OPEN-P : token OPEN-P
+ 	In execution -> : stn-delimiters : token INT
+ 	In execution -> : params_list : token INT
+ 	In execution ->: param_decl : token INT
+ 	In execution -> : variable_type : token INT
+ 	Terminated->: INT : token INT
+ 	In execution -> : st-delimiters : token ST-DELIMITER
+ 	Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 	Terminated->: ID : token ID
+ 	In execution -> : st-delimiters : token CLOSE-P
+ 	In execution -> : params_list_continue : token CLOSE-P
+ 	In execution -> : stn-delimiters : token CLOSE-P
+ 	Terminated->: CLOSE-P : token CLOSE-P
+ 	In execution -> : stn-delimiters : token OPEN-B
+ 	In execution -> : compound_stmt : token OPEN-B
+ 		Terminated->: OPEN-B : token OPEN-B
+ 		In execution -> : stn-delimiters : token N-DELIMITER
+ 		Terminated->: N-DELIMITER : token N-DELIMITER
+ 		Terminated->: N-DELIMITER : token N-DELIMITER
+ 		Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 		In execution -> : n_stmts : token IF
+ 		In execution -> : stn-delimiters : token IF
+ 		In execution -> : n_stmt : token IF
+ 			In execution -> : decl_stmt : token IF
+ 				In execution -> : variable_type : token IF
+ 			In execution -> : compound_stmt : token IF
+ 			In execution -> : if_stmt : token IF
+ 				Terminated->: IF : token IF
+ 				In execution -> : stn-delimiters : token ST-DELIMITER
+ 				Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 				Terminated->: OPEN-P : token OPEN-P
+ 				In execution -> : stn-delimiters : token ST-DELIMITER
+ 				Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 				In execution -> : bool_expr : token OPEN-P
+ 				In execution -> : bool_expr_start_variations : token OPEN-P
+ 				In execution -> : st-delimiters : token OPEN-P
+ 				In execution -> : simple_bool_expr : token OPEN-P
+ 				In execution -> : simple_expr : token OPEN-P
+ 				In execution -> : arithm_expr : token OPEN-P
+ 				In execution -> : arithm_simple_expr : token OPEN-P
+ 				Terminated->: OPEN-P : token OPEN-P
+ 				In execution -> : stn-delimiters : token INT-VAR
+ 				In execution -> : arithm_expr : token INT-VAR
+ 				In execution -> : arithm_simple_expr : token INT-VAR
+ 				Terminated->: INT-VAR : token INT-VAR
+ 				In execution -> : stn-delimiters : token MULT
+ 				In execution -> : arithm_expr_end : token MULT
+ 				In execution -> : arithm_operators : token MULT
+ 				Terminated->: MULT : token MULT
+ 				In execution -> : st-delimiters : token INT-VAR
+ 				In execution -> : arithm_expr : token INT-VAR
+ 				In execution -> : arithm_simple_expr : token INT-VAR
+ 				Terminated->: INT-VAR : token INT-VAR
+ 				In execution -> : stn-delimiters : token PLUS
+ 				In execution -> : arithm_expr_end : token PLUS
+ 				In execution -> : arithm_operators : token PLUS
+ 				Terminated->: PLUS : token PLUS
+ 				In execution -> : st-delimiters : token INT-VAR
+ 				In execution -> : arithm_expr : token INT-VAR
+ 				In execution -> : arithm_simple_expr : token INT-VAR
+ 				Terminated->: INT-VAR : token INT-VAR
+ 				In execution -> : stn-delimiters : token CLOSE-P
+ 				In execution -> : arithm_expr_end : token CLOSE-P
+ 				In execution -> : arithm_operators : token CLOSE-P
+ 				In execution -> : stn-delimiters : token CLOSE-P
+ 				Terminated->: CLOSE-P : token CLOSE-P
+ 				In execution -> : stn-delimiters : token MULT
+ 				In execution -> : arithm_expr_end : token MULT
+ 				In execution -> : arithm_operators : token MULT
+ 				Terminated->: MULT : token MULT
+ 				In execution -> : st-delimiters : token INT-VAR
+ 				In execution -> : arithm_expr : token INT-VAR
+ 				In execution -> : arithm_simple_expr : token INT-VAR
+ 				Terminated->: INT-VAR : token INT-VAR
+ 				In execution -> : stn-delimiters : token ST-DELIMITER
+ 				Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 				In execution -> : arithm_expr_end : token EQ
+ 				In execution -> : arithm_operators : token EQ
+ 				In execution -> : st-delimiters : token EQ
+ 				In execution -> : relational_operators : token EQ
+ 				Terminated->: EQ : token EQ
+ 				In execution -> : st-delimiters : token ST-DELIMITER
+ 				Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 				In execution -> : simple_expr : token INT-VAR
+ 				In execution -> : arithm_expr : token INT-VAR
+ 				In execution -> : arithm_simple_expr : token INT-VAR
+ 				Terminated->: INT-VAR : token INT-VAR
+ 				In execution -> : stn-delimiters : token ST-DELIMITER
+ 				Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 				In execution -> : arithm_expr_end : token CLOSE-P
+ 				In execution -> : arithm_operators : token CLOSE-P
+ 				In execution -> : st-delimiters : token CLOSE-P
+ 				In execution -> : stn-delimiters : token CLOSE-P
+ 				In execution -> : bool_expr_continue : token CLOSE-P
+ 				In execution -> : logical_operators : token CLOSE-P
+ 				In execution -> : stn-delimiters : token CLOSE-P
+ 				Terminated->: CLOSE-P : token CLOSE-P
+ 				In execution -> : st-delimiters : token OPEN-B
+ 				In execution -> : single_new_line : token OPEN-B
+ 				In execution -> : st-delimiters : token OPEN-B
+ 				In execution -> : n_stmt : token OPEN-B
+ 					In execution -> : decl_stmt : token OPEN-B
+ 						In execution -> : variable_type : token OPEN-B
+ 					In execution -> : compound_stmt : token OPEN-B
+ 						Terminated->: OPEN-B : token OPEN-B
+ 						In execution -> : stn-delimiters : token N-DELIMITER
+ 						Terminated->: N-DELIMITER : token N-DELIMITER
+ 						Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 						In execution -> : n_stmts : token ID
+ 						In execution -> : stn-delimiters : token ID
+ 						In execution -> : n_stmt : token ID
+ 							In execution -> : decl_stmt : token ID
+ 								In execution -> : variable_type : token ID
+ 							In execution -> : compound_stmt : token ID
+ 							In execution -> : if_stmt : token ID
+ 							In execution -> : for_stmt : token ID
+ 							In execution -> : loop_stmt : token ID
+ 							In execution -> : ufa_common_stmt : token ID
+ 								Terminated->: ID : token ID
+ 								In execution -> : unary_continue : token INCREMENT
+ 									In execution -> : unary_operators : token INCREMENT
+ 									Terminated->: INCREMENT : token INCREMENT
+ 									In execution -> : st-delimiters : token SEMICOLON
+ 									Terminated->: SEMICOLON : token SEMICOLON
+ 						In execution -> : stn-delimiters : token N-DELIMITER
+ 						Terminated->: N-DELIMITER : token N-DELIMITER
+ 						Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 						In execution -> : stn-delimiters : token CLOSE-B
+ 						In execution -> : n_stmt : token CLOSE-B
+ 							In execution -> : decl_stmt : token CLOSE-B
+ 								In execution -> : variable_type : token CLOSE-B
+ 							In execution -> : compound_stmt : token CLOSE-B
+ 							In execution -> : if_stmt : token CLOSE-B
+ 							In execution -> : for_stmt : token CLOSE-B
+ 							In execution -> : loop_stmt : token CLOSE-B
+ 							In execution -> : ufa_common_stmt : token CLOSE-B
+ 						In execution -> : stn-delimiters : token CLOSE-B
+ 						Terminated->: CLOSE-B : token CLOSE-B
+ 				In execution -> : stn-delimiters : token ELSE
+ 				In execution -> : if_stmt_end : token ELSE
+ 				Terminated->: ELSE : token ELSE
+ 				In execution -> : st-delimiters : token OPEN-B
+ 				In execution -> : n_stmt : token OPEN-B
+ 					In execution -> : decl_stmt : token OPEN-B
+ 						In execution -> : variable_type : token OPEN-B
+ 					In execution -> : compound_stmt : token OPEN-B
+ 						Terminated->: OPEN-B : token OPEN-B
+ 						In execution -> : stn-delimiters : token N-DELIMITER
+ 						Terminated->: N-DELIMITER : token N-DELIMITER
+ 						Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 						In execution -> : n_stmts : token ID
+ 						In execution -> : stn-delimiters : token ID
+ 						In execution -> : n_stmt : token ID
+ 							In execution -> : decl_stmt : token ID
+ 								In execution -> : variable_type : token ID
+ 							In execution -> : compound_stmt : token ID
+ 							In execution -> : if_stmt : token ID
+ 							In execution -> : for_stmt : token ID
+ 							In execution -> : loop_stmt : token ID
+ 							In execution -> : ufa_common_stmt : token ID
+ 								Terminated->: ID : token ID
+ 								In execution -> : unary_continue : token INCREMENT
+ 									In execution -> : unary_operators : token INCREMENT
+ 									Terminated->: INCREMENT : token INCREMENT
+ 									In execution -> : st-delimiters : token SEMICOLON
+ 									Terminated->: SEMICOLON : token SEMICOLON
+ 						In execution -> : stn-delimiters : token N-DELIMITER
+ 						Terminated->: N-DELIMITER : token N-DELIMITER
+ 						Terminated->: ST-DELIMITER : token ST-DELIMITER
+ 						In execution -> : stn-delimiters : token CLOSE-B
+ 						In execution -> : n_stmt : token CLOSE-B
+ 							In execution -> : decl_stmt : token CLOSE-B
+ 								In execution -> : variable_type : token CLOSE-B
+ 							In execution -> : compound_stmt : token CLOSE-B
+ 							In execution -> : if_stmt : token CLOSE-B
+ 							In execution -> : for_stmt : token CLOSE-B
+ 							In execution -> : loop_stmt : token CLOSE-B
+ 							In execution -> : ufa_common_stmt : token CLOSE-B
+ 						In execution -> : stn-delimiters : token CLOSE-B
+ 						Terminated->: CLOSE-B : token CLOSE-B
+ 		In execution -> : stn-delimiters : token N-DELIMITER
+ 		Terminated->: N-DELIMITER : token N-DELIMITER
+ 		Terminated->: N-DELIMITER : token N-DELIMITER
+ 		In execution -> : stn-delimiters : token CLOSE-B
+ 		In execution -> : n_stmt : token CLOSE-B
+ 			In execution -> : decl_stmt : token CLOSE-B
+ 				In execution -> : variable_type : token CLOSE-B
+ 			In execution -> : compound_stmt : token CLOSE-B
+ 			In execution -> : if_stmt : token CLOSE-B
+ 			In execution -> : for_stmt : token CLOSE-B
+ 			In execution -> : loop_stmt : token CLOSE-B
+ 			In execution -> : ufa_common_stmt : token CLOSE-B
+ 		In execution -> : stn-delimiters : token CLOSE-B
+ 		Terminated->: CLOSE-B : token CLOSE-B
+ 	In execution -> : stn-delimiters : token N-DELIMITER
+ 	Terminated->: N-DELIMITER : token N-DELIMITER
+ 	Terminated->: N-DELIMITER : token N-DELIMITER
+ In execution -> : stn-delimiters : token ID
+ In execution -> : stn-delimiters : token ID
+ In execution -> : n_stmt : token ID
+ 	In execution -> : decl_stmt : token ID
+ 		In execution -> : variable_type : token ID
+ 	In execution -> : compound_stmt : token ID
+ 	In execution -> : if_stmt : token ID
+ 	In execution -> : for_stmt : token ID
+ 	In execution -> : loop_stmt : token ID
+ 	In execution -> : ufa_common_stmt : token ID
+ 		Terminated->: ID : token ID
+ 		In execution -> : unary_continue : token OPEN-P
+ 			In execution -> : unary_operators : token OPEN-P
+ 		In execution ->: func_call_stmt : token OPEN-P
+ 			In execution -> : stn-delimiters : token OPEN-P
+ 			Terminated->: OPEN-P : token OPEN-P
+ 			In execution -> : stn-delimiters : token ID
+ 			In execution -> : params_values_list : token ID
+ 			In execution -> : simple_expr : token ID
+ 			In execution -> : arithm_expr : token ID
+ 			In execution -> : arithm_simple_expr : token ID
+ 			Terminated->: ID : token ID
+ 			In execution -> : stn-delimiters : token CLOSE-P
+ 			In execution -> : arithm_expr_end : token CLOSE-P
+ 			In execution -> : arithm_operators : token CLOSE-P
+ 			In execution -> : st-delimiters : token CLOSE-P
+ 			In execution -> : params_value_list_continue : token CLOSE-P
+ 			In execution -> : stn-delimiters : token CLOSE-P
+ 			Terminated->: CLOSE-P : token CLOSE-P
+ 			In execution -> : st-delimiters : token SEMICOLON
+ 			Terminated->: SEMICOLON : token SEMICOLON
+ In execution -> : stn-delimiters : token EOF
+ Terminated->: EOF : token EOF
+ 
+
+Semantic Analysis Tree ;
+
+VOID
+└── VOID
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               ├── NON_TYPE
+    │           │               │   └── NON_TYPE
+    │           │               ├── INT
+    │           │               │   ├── INT
+    │           │               │   │   └── INT
+    │           │               │   │       └── INT
+    │           │               │   └── INT
+    │           │               │       ├── NON_TYPE
+    │           │               │       │   └── NON_TYPE
+    │           │               │       │       └── NON_TYPE
+    │           │               │       └── INT
+    │           │               │           └── INT
+    │           │               │               └── INT
+    │           │               │                   └── INT
+    │           │               └── NON_TYPE
+    │           │                   └── NON_TYPE
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── VOID
+    │   │   └── INT
+    │   │       ├── INT
+    │   │       │   └── INT
+    │   │       │       └── INT
+    │   │       └── INT
+    │   │           └── INT
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   └── VOID
+    │       ├── NON_TYPE
+    │       │   └── NON_TYPE
+    │       ├── VOID
+    │       │   └── VOID
+    │       │       └── VOID
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── BOOL
+    │       │           │   └── BOOL
+    │       │           │       └── BOOL
+    │       │           │           ├── INT
+    │       │           │           │   └── INT
+    │       │           │           │       ├── INT
+    │       │           │           │       │   ├── NON_TYPE
+    │       │           │           │       │   │   └── NON_TYPE
+    │       │           │           │       │   ├── INT
+    │       │           │           │       │   │   ├── INT
+    │       │           │           │       │   │   │   └── INT
+    │       │           │           │       │   │   │       └── INT
+    │       │           │           │       │   │   └── INT
+    │       │           │           │       │   │       ├── NON_TYPE
+    │       │           │           │       │   │       │   └── NON_TYPE
+    │       │           │           │       │   │       │       └── NON_TYPE
+    │       │           │           │       │   │       └── INT
+    │       │           │           │       │   │           ├── INT
+    │       │           │           │       │   │           │   └── INT
+    │       │           │           │       │   │           │       └── INT
+    │       │           │           │       │   │           └── INT
+    │       │           │           │       │   │               ├── NON_TYPE
+    │       │           │           │       │   │               │   └── NON_TYPE
+    │       │           │           │       │   │               │       └── NON_TYPE
+    │       │           │           │       │   │               └── INT
+    │       │           │           │       │   │                   └── INT
+    │       │           │           │       │   │                       └── INT
+    │       │           │           │       │   │                           └── INT
+    │       │           │           │       │   └── NON_TYPE
+    │       │           │           │       │       └── NON_TYPE
+    │       │           │           │       └── INT
+    │       │           │           │           ├── NON_TYPE
+    │       │           │           │           │   └── NON_TYPE
+    │       │           │           │           │       └── NON_TYPE
+    │       │           │           │           └── INT
+    │       │           │           │               └── INT
+    │       │           │           │                   └── INT
+    │       │           │           │                       └── INT
+    │       │           │           ├── BOOL
+    │       │           │           │   └── BOOL
+    │       │           │           │       └── BOOL
+    │       │           │           └── INT
+    │       │           │               └── INT
+    │       │           │                   └── INT
+    │       │           │                       └── INT
+    │       │           │                           └── INT
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── VOID
+    │       │           │   └── VOID
+    │       │           │       ├── NON_TYPE
+    │       │           │       │   └── NON_TYPE
+    │       │           │       ├── VOID
+    │       │           │       │   └── VOID
+    │       │           │       │       └── VOID
+    │       │           │       │           ├── INT
+    │       │           │       │           │   └── INT
+    │       │           │       │           └── UNARY
+    │       │           │       │               └── UNARY
+    │       │           │       │                   ├── UNARY
+    │       │           │       │                   │   └── UNARY
+    │       │           │       │                   │       └── UNARY
+    │       │           │       │                   └── NON_TYPE
+    │       │           │       │                       └── NON_TYPE
+    │       │           │       └── NON_TYPE
+    │       │           │           └── NON_TYPE
+    │       │           └── VOID
+    │       │               ├── NON_TYPE
+    │       │               │   └── NON_TYPE
+    │       │               └── VOID
+    │       │                   └── VOID
+    │       │                       ├── NON_TYPE
+    │       │                       │   └── NON_TYPE
+    │       │                       ├── VOID
+    │       │                       │   └── VOID
+    │       │                       │       └── VOID
+    │       │                       │           ├── INT
+    │       │                       │           │   └── INT
+    │       │                       │           └── UNARY
+    │       │                       │               └── UNARY
+    │       │                       │                   ├── UNARY
+    │       │                       │                   │   └── UNARY
+    │       │                       │                   │       └── UNARY
+    │       │                       │                   └── NON_TYPE
+    │       │                       │                       └── NON_TYPE
+    │       │                       └── NON_TYPE
+    │       │                           └── NON_TYPE
+    │       └── NON_TYPE
+    │           └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── NON_TYPE
+    │       │   └── NON_TYPE
+    │       └── VOID
+    │           └── VOID
+    │               ├── NON_TYPE
+    │               │   └── NON_TYPE
+    │               ├── VOID
+    │               │   └── INT
+    │               │       └── INT
+    │               │           └── INT
+    │               │               └── INT
+    │               │                   └── INT
+    │               ├── NON_TYPE
+    │               │   └── NON_TYPE
+    │               └── NON_TYPE
+    │                   └── NON_TYPE
+    └── NON_TYPE
+        └── NON_TYPE

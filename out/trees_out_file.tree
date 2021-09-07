@@ -1,0 +1,460 @@
+Syntax Analysis Tree ;
+
+flex_start
+└── stmts
+    ├── n_stmt
+    │   └── decl_stmt
+    │       ├── variable_type
+    │       │   └── TERM
+    │       │       └── INT
+    │       └── decl_stmt_end
+    │           ├── TERM
+    │           │   └── ID,input
+    │           ├── decl_stmt_body
+    │           │   ├── assignment_operators
+    │           │   │   └── TERM
+    │           │   │       └── N-ASSIGN-OPT
+    │           │   └── simple_expr
+    │           │       └── arithm_expr
+    │           │           └── arithm_simple_expr
+    │           │               └── TERM
+    │           │                   └── INT-VAR,5
+    │           └── TERM
+    │               └── SEMICOLON
+    ├── n_stmt
+    │   └── decl_stmt
+    │       ├── variable_type
+    │       │   └── TERM
+    │       │       └── INT
+    │       └── decl_stmt_end
+    │           ├── TERM
+    │           │   └── ID,rem
+    │           ├── decl_stmt_body
+    │           │   ├── assignment_operators
+    │           │   │   └── TERM
+    │           │   │       └── N-ASSIGN-OPT
+    │           │   └── simple_expr
+    │           │       └── arithm_expr
+    │           │           └── arithm_simple_expr
+    │           │               ├── TERM
+    │           │               │   └── OPEN-P
+    │           │               ├── arithm_expr
+    │           │               │   ├── arithm_simple_expr
+    │           │               │   │   └── TERM
+    │           │               │   │       └── ID,input
+    │           │               │   └── arithm_expr_end
+    │           │               │       ├── arithm_operators
+    │           │               │       │   └── TERM
+    │           │               │       │       └── REM
+    │           │               │       └── arithm_expr
+    │           │               │           └── arithm_simple_expr
+    │           │               │               └── TERM
+    │           │               │                   └── INT-VAR,2
+    │           │               └── TERM
+    │           │                   └── CLOSE-P
+    │           └── TERM
+    │               └── SEMICOLON
+    ├── n_stmt
+    │   └── decl_stmt
+    │       ├── variable_type
+    │       │   └── TERM
+    │       │       └── INT
+    │       └── decl_stmt_end
+    │           ├── TERM
+    │           │   └── ID,evenCount
+    │           ├── decl_stmt_body
+    │           │   ├── assignment_operators
+    │           │   │   └── TERM
+    │           │   │       └── N-ASSIGN-OPT
+    │           │   └── simple_expr
+    │           │       └── arithm_expr
+    │           │           └── arithm_simple_expr
+    │           │               └── TERM
+    │           │                   └── INT-VAR,0
+    │           └── TERM
+    │               └── SEMICOLON
+    ├── n_stmt
+    │   └── decl_stmt
+    │       ├── variable_type
+    │       │   └── TERM
+    │       │       └── INT
+    │       └── decl_stmt_end
+    │           ├── TERM
+    │           │   └── ID,oddCount
+    │           ├── decl_stmt_body
+    │           │   ├── assignment_operators
+    │           │   │   └── TERM
+    │           │   │       └── N-ASSIGN-OPT
+    │           │   └── simple_expr
+    │           │       └── arithm_expr
+    │           │           └── arithm_simple_expr
+    │           │               └── TERM
+    │           │                   └── INT-VAR,0
+    │           └── TERM
+    │               └── SEMICOLON
+    ├── func_init_stmt
+    │   ├── TERM
+    │   │   └── FUNCTION
+    │   ├── TERM
+    │   │   └── ID,isEven
+    │   ├── TERM
+    │   │   └── OPEN-P
+    │   ├── params_list
+    │   │   └── param_decl
+    │   │       ├── variable_type
+    │   │       │   └── TERM
+    │   │       │       └── INT
+    │   │       └── TERM
+    │   │           └── ID,in
+    │   ├── TERM
+    │   │   └── CLOSE-P
+    │   └── compound_stmt
+    │       ├── TERM
+    │       │   └── OPEN-B
+    │       ├── n_stmts
+    │       │   └── n_stmt
+    │       │       └── if_stmt
+    │       │           ├── TERM
+    │       │           │   └── IF
+    │       │           ├── TERM
+    │       │           │   └── OPEN-P
+    │       │           ├── bool_expr
+    │       │           │   └── bool_expr_start_variations
+    │       │           │       └── simple_bool_expr
+    │       │           │           ├── simple_expr
+    │       │           │           │   └── arithm_expr
+    │       │           │           │       ├── arithm_simple_expr
+    │       │           │           │       │   ├── TERM
+    │       │           │           │       │   │   └── OPEN-P
+    │       │           │           │       │   ├── arithm_expr
+    │       │           │           │       │   │   ├── arithm_simple_expr
+    │       │           │           │       │   │   │   └── TERM
+    │       │           │           │       │   │   │       └── INT-VAR,3
+    │       │           │           │       │   │   └── arithm_expr_end
+    │       │           │           │       │   │       ├── arithm_operators
+    │       │           │           │       │   │       │   └── TERM
+    │       │           │           │       │   │       │       └── MULT
+    │       │           │           │       │   │       └── arithm_expr
+    │       │           │           │       │   │           ├── arithm_simple_expr
+    │       │           │           │       │   │           │   └── TERM
+    │       │           │           │       │   │           │       └── INT-VAR,2
+    │       │           │           │       │   │           └── arithm_expr_end
+    │       │           │           │       │   │               ├── arithm_operators
+    │       │           │           │       │   │               │   └── TERM
+    │       │           │           │       │   │               │       └── PLUS
+    │       │           │           │       │   │               └── arithm_expr
+    │       │           │           │       │   │                   └── arithm_simple_expr
+    │       │           │           │       │   │                       └── TERM
+    │       │           │           │       │   │                           └── INT-VAR,5
+    │       │           │           │       │   └── TERM
+    │       │           │           │       │       └── CLOSE-P
+    │       │           │           │       └── arithm_expr_end
+    │       │           │           │           ├── arithm_operators
+    │       │           │           │           │   └── TERM
+    │       │           │           │           │       └── MULT
+    │       │           │           │           └── arithm_expr
+    │       │           │           │               └── arithm_simple_expr
+    │       │           │           │                   └── TERM
+    │       │           │           │                       └── INT-VAR,4
+    │       │           │           ├── relational_operators
+    │       │           │           │   └── TERM
+    │       │           │           │       └── EQ
+    │       │           │           └── simple_expr
+    │       │           │               └── arithm_expr
+    │       │           │                   └── arithm_simple_expr
+    │       │           │                       └── TERM
+    │       │           │                           └── INT-VAR,0
+    │       │           ├── TERM
+    │       │           │   └── CLOSE-P
+    │       │           ├── n_stmt
+    │       │           │   └── compound_stmt
+    │       │           │       ├── TERM
+    │       │           │       │   └── OPEN-B
+    │       │           │       ├── n_stmts
+    │       │           │       │   └── n_stmt
+    │       │           │       │       └── ufa_common_stmt
+    │       │           │       │           ├── TERM
+    │       │           │       │           │   └── ID,evenCount
+    │       │           │       │           └── ufa_common_stmt_continue
+    │       │           │       │               └── unary_continue
+    │       │           │       │                   ├── unary_operators
+    │       │           │       │                   │   └── TERM
+    │       │           │       │                   │       └── INCREMENT
+    │       │           │       │                   └── TERM
+    │       │           │       │                       └── SEMICOLON
+    │       │           │       └── TERM
+    │       │           │           └── CLOSE-B
+    │       │           └── if_stmt_end
+    │       │               ├── TERM
+    │       │               │   └── ELSE
+    │       │               └── n_stmt
+    │       │                   └── compound_stmt
+    │       │                       ├── TERM
+    │       │                       │   └── OPEN-B
+    │       │                       ├── n_stmts
+    │       │                       │   └── n_stmt
+    │       │                       │       └── ufa_common_stmt
+    │       │                       │           ├── TERM
+    │       │                       │           │   └── ID,oddCount
+    │       │                       │           └── ufa_common_stmt_continue
+    │       │                       │               └── unary_continue
+    │       │                       │                   ├── unary_operators
+    │       │                       │                   │   └── TERM
+    │       │                       │                   │       └── INCREMENT
+    │       │                       │                   └── TERM
+    │       │                       │                       └── SEMICOLON
+    │       │                       └── TERM
+    │       │                           └── CLOSE-B
+    │       └── TERM
+    │           └── CLOSE-B
+    ├── n_stmt
+    │   └── ufa_common_stmt
+    │       ├── TERM
+    │       │   └── ID,isEven
+    │       └── ufa_common_stmt_continue
+    │           └── func_call_continue
+    │               ├── TERM
+    │               │   └── OPEN-P
+    │               ├── params_values_list
+    │               │   └── simple_expr
+    │               │       └── arithm_expr
+    │               │           └── arithm_simple_expr
+    │               │               └── TERM
+    │               │                   └── ID,input
+    │               ├── TERM
+    │               │   └── CLOSE-P
+    │               └── TERM
+    │                   └── SEMICOLON
+    └── TERM
+        └── EOF
+
+
+Semantic Analysis Tree ;
+
+VOID
+└── VOID
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               ├── NON_TYPE
+    │           │               │   └── NON_TYPE
+    │           │               ├── INT
+    │           │               │   ├── INT
+    │           │               │   │   └── INT
+    │           │               │   │       └── INT
+    │           │               │   └── INT
+    │           │               │       ├── NON_TYPE
+    │           │               │       │   └── NON_TYPE
+    │           │               │       │       └── NON_TYPE
+    │           │               │       └── INT
+    │           │               │           └── INT
+    │           │               │               └── INT
+    │           │               │                   └── INT
+    │           │               └── NON_TYPE
+    │           │                   └── NON_TYPE
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── INT
+    │       │   └── INT
+    │       │       └── INT
+    │       └── INT
+    │           ├── INT
+    │           │   └── INT
+    │           ├── INT
+    │           │   ├── NON_TYPE
+    │           │   │   └── NON_TYPE
+    │           │   │       └── NON_TYPE
+    │           │   └── INT
+    │           │       └── INT
+    │           │           └── INT
+    │           │               └── INT
+    │           │                   └── INT
+    │           └── NON_TYPE
+    │               └── NON_TYPE
+    ├── VOID
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   ├── VOID
+    │   │   └── INT
+    │   │       ├── INT
+    │   │       │   └── INT
+    │   │       │       └── INT
+    │   │       └── INT
+    │   │           └── INT
+    │   ├── NON_TYPE
+    │   │   └── NON_TYPE
+    │   └── VOID
+    │       ├── NON_TYPE
+    │       │   └── NON_TYPE
+    │       ├── VOID
+    │       │   └── VOID
+    │       │       └── VOID
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── BOOL
+    │       │           │   └── BOOL
+    │       │           │       └── BOOL
+    │       │           │           ├── INT
+    │       │           │           │   └── INT
+    │       │           │           │       ├── INT
+    │       │           │           │       │   ├── NON_TYPE
+    │       │           │           │       │   │   └── NON_TYPE
+    │       │           │           │       │   ├── INT
+    │       │           │           │       │   │   ├── INT
+    │       │           │           │       │   │   │   └── INT
+    │       │           │           │       │   │   │       └── INT
+    │       │           │           │       │   │   └── INT
+    │       │           │           │       │   │       ├── NON_TYPE
+    │       │           │           │       │   │       │   └── NON_TYPE
+    │       │           │           │       │   │       │       └── NON_TYPE
+    │       │           │           │       │   │       └── INT
+    │       │           │           │       │   │           ├── INT
+    │       │           │           │       │   │           │   └── INT
+    │       │           │           │       │   │           │       └── INT
+    │       │           │           │       │   │           └── INT
+    │       │           │           │       │   │               ├── NON_TYPE
+    │       │           │           │       │   │               │   └── NON_TYPE
+    │       │           │           │       │   │               │       └── NON_TYPE
+    │       │           │           │       │   │               └── INT
+    │       │           │           │       │   │                   └── INT
+    │       │           │           │       │   │                       └── INT
+    │       │           │           │       │   │                           └── INT
+    │       │           │           │       │   └── NON_TYPE
+    │       │           │           │       │       └── NON_TYPE
+    │       │           │           │       └── INT
+    │       │           │           │           ├── NON_TYPE
+    │       │           │           │           │   └── NON_TYPE
+    │       │           │           │           │       └── NON_TYPE
+    │       │           │           │           └── INT
+    │       │           │           │               └── INT
+    │       │           │           │                   └── INT
+    │       │           │           │                       └── INT
+    │       │           │           ├── BOOL
+    │       │           │           │   └── BOOL
+    │       │           │           │       └── BOOL
+    │       │           │           └── INT
+    │       │           │               └── INT
+    │       │           │                   └── INT
+    │       │           │                       └── INT
+    │       │           │                           └── INT
+    │       │           ├── NON_TYPE
+    │       │           │   └── NON_TYPE
+    │       │           ├── VOID
+    │       │           │   └── VOID
+    │       │           │       ├── NON_TYPE
+    │       │           │       │   └── NON_TYPE
+    │       │           │       ├── VOID
+    │       │           │       │   └── VOID
+    │       │           │       │       └── VOID
+    │       │           │       │           ├── INT
+    │       │           │       │           │   └── INT
+    │       │           │       │           └── UNARY
+    │       │           │       │               └── UNARY
+    │       │           │       │                   ├── UNARY
+    │       │           │       │                   │   └── UNARY
+    │       │           │       │                   │       └── UNARY
+    │       │           │       │                   └── NON_TYPE
+    │       │           │       │                       └── NON_TYPE
+    │       │           │       └── NON_TYPE
+    │       │           │           └── NON_TYPE
+    │       │           └── VOID
+    │       │               ├── NON_TYPE
+    │       │               │   └── NON_TYPE
+    │       │               └── VOID
+    │       │                   └── VOID
+    │       │                       ├── NON_TYPE
+    │       │                       │   └── NON_TYPE
+    │       │                       ├── VOID
+    │       │                       │   └── VOID
+    │       │                       │       └── VOID
+    │       │                       │           ├── INT
+    │       │                       │           │   └── INT
+    │       │                       │           └── UNARY
+    │       │                       │               └── UNARY
+    │       │                       │                   ├── UNARY
+    │       │                       │                   │   └── UNARY
+    │       │                       │                   │       └── UNARY
+    │       │                       │                   └── NON_TYPE
+    │       │                       │                       └── NON_TYPE
+    │       │                       └── NON_TYPE
+    │       │                           └── NON_TYPE
+    │       └── NON_TYPE
+    │           └── NON_TYPE
+    ├── VOID
+    │   └── VOID
+    │       ├── NON_TYPE
+    │       │   └── NON_TYPE
+    │       └── VOID
+    │           └── VOID
+    │               ├── NON_TYPE
+    │               │   └── NON_TYPE
+    │               ├── VOID
+    │               │   └── INT
+    │               │       └── INT
+    │               │           └── INT
+    │               │               └── INT
+    │               │                   └── INT
+    │               ├── NON_TYPE
+    │               │   └── NON_TYPE
+    │               └── NON_TYPE
+    │                   └── NON_TYPE
+    └── NON_TYPE
+        └── NON_TYPE
